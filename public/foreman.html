@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WMI-Foreman</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class='container'>
+		
+		<div class='jumbotron'>
+			<h1>Whitman Masonry</h1>
+			<h3>Foreman Page</h3>
+		</div>
+
+		<div class='panel panel-primary'>
+			<div class="form-group">
+				
+				<h3>Job Info</h3>
+				<label>Foreman Name</label>
+				<select class="chosen-select" id="fname">
+		      <option value=""></option>
+		      <option value="1">Juan</option>
+		      <option value="2">Billy</option>
+		      <option value="3">Connie</option>
+		      <option value="4">Bradley</option>
+		      <option value="5">Andreas</option>
+	    	</select>
+	    	<label>Job Name</label>
+	    	<select class="chosen-select" id="jname">
+		      <option value=""></option>
+		      <option value="1">Triangle Springs</option>
+		      <option value="2">Union Station</option>
+		      <option value="3">NCSU-CUP</option>
+		      <option value="4">RTI</option>
+		      <option value="5">Duke Engergy - Goldsboro</option>
+	    	</select>
+	    	<label>Date</label>
+	    	<select></select>
+				
+				<h3>Materials</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<label>Brick</label>
+		    		<input type="text" class="form-control" placeholder="Brick">
+		    	</div>
+		    	<div class="col-md-6">
+		    		<label>CMU</label>
+		    		<input type="text" class="form-control" placeholder="CMU">
+		    	</div>
+				</div>
+    		
+    		<label>Additional Materials/ Comments</label>
+    		<textarea class="form-control" placeholder="Additional Materials/ Comments"></textarea>
+    		
+    		<h3>Personel</h3>
+    		<label>Masons</label>
+    		<select class="1-50"><option></option></select>
+    		<label>Laborers</label>
+    		<select class="1-50"><option></option></select>
+    		<label>Foremen</label>
+    		<select class="1-5"><option></option></select>
+    		<label>Operators</label>
+    		<select class="1-5"><option></option></select>
+    		<label>Hours Worked</label>
+    		<select class="1-12"><option></option></select>
+
+				<button class="btn btn-primary" id='fsubmit'>Submit</button>
+      </div>
+		</div>
+	</div>
+<script type="text/javascript" src="./js/foreman.js"></script>
+</body>
+</html>
