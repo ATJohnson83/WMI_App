@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS wmi_app_db;
+CREATE DATABASE wmi_app_db;
