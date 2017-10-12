@@ -2,9 +2,9 @@
   "development": {
     "username": "root",
     "password": "root",
-    "port": 8889,
     "database": "wmi_app_db",
-    "host": "localhost",
+    "port": 8889,
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {

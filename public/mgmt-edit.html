@@ -70,28 +70,16 @@
 							<input placeholder="Enter a Foreman" id="foreman-name" type="text" />
 							<button type="submit" class="btn btn-success">Add Forman</button>
 							
+							<h3>Active Foremen</h3>
 							<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Active</th>
-									<th>Delete Foreman</th>
-								</tr>
-							</thead>
-							<tbody id="ftblbdy">
-								<tr>
-									<td>Billy McGee</td>
-									<td>
-										<input type="checkbox" name="active">
-									</td>
-									<td>
-										<button class='btn btn-danger'>
-											Delete
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+								<tbody id="aftblbdy"></tbody>
+							</table>
+
+							<h3>Deactive Foremen</h3>
+							<table class="table table-striped">
+								<tbody id="uftblbdy"> </tbody>
+							</table>
+					
 					</div>
 				</div>
 			</div>
@@ -103,6 +91,7 @@
 
 
 	</div>
-<script type="text/javascript" src="./js/edid-foremen.js"></script>
+<script type="text/javascript" src="./js/edit-foremen.js"></script>
+<script type="text/javascript" src="./js/edit-jobs.js"></script>
 </body>
 </html>
