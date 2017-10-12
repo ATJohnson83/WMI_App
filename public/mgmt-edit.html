@@ -6,6 +6,7 @@
 	<title>WMI-Mgmt-Edit</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
 	<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- Jquery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.js"
@@ -24,36 +25,26 @@
 
 		<div class='panel panel-primary'>
 			<div class="form-group">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<div class="job-container">
-								<h1>Jobs</h1>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="job-container">
 								
-								<input placeholder="Enter a Job" id="job-name" type="text" />
-								<button type="submit" class="btn btn-success">Create Job</button>
-								
-								<table class="table table-striped">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Active</th>
-										<th>Delete Job</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Wake Tech</td>
-										<td>
-											<input type="checkbox" name="active">
-										</td>
-										<td>
-											<button class='btn btn-danger'>
-												Delete
-											</button>
-										</td>
-									</tr>
-								</tbody>
+							<h1>Jobs</h1>
+							<form id='addjob'>
+							<input placeholder="Enter a Job" id="job-name" type="text" />
+							<button type="submit" class="btn btn-success">Add Job</button>
+							</form>
+							
+							<h3>Active Jobs</h3>
+							<table class="table table-striped">
+								<tbody id="ajtblbdy"></tbody>
 							</table>
+
+							<h3>Deactive Jobs</h3>
+							<table class="table table-striped">
+								<tbody id="djtblbdy"> </tbody>
+							</table>
+								
 						</div>
 					</div>
 				</div>
@@ -65,11 +56,12 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<div class="job-container">
+							
 							<h1>Foremen</h1>
 							<form id='addforeman'>
-							<input placeholder="Enter a Foreman" id="foreman-name" type="text" />
-							<button type="submit" class="btn btn-success">Add Forman</button>
-						</form>
+								<input placeholder="Enter a Foreman" id="foreman-name" type="text" />
+								<button type="submit" class="btn btn-success">Add Forman</button>
+							</form>
 							
 
 							<h3>Active Foremen</h3>
@@ -79,19 +71,15 @@
 
 							<h3>Deactive Foremen</h3>
 							<table class="table table-striped">
-								<tbody id="uftblbdy"> </tbody>
+								<tbody id="dftblbdy"> </tbody>
 							</table>
-					
+						
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 		
-		
-
-
-
 	</div>
 <script type="text/javascript" src="./js/edit-foremen.js"></script>
 <script type="text/javascript" src="./js/edit-jobs.js"></script>

@@ -1,14 +1,21 @@
 $(document).ready(function() {
-	// alert('foremen-test');
 	
 	var nameInput = $("#foreman-name");
 	var activeForemenList = $("#aftblbdy");
-	var unactiveForemenList = $("#uftblbdy");
+	var unactiveForemenList = $("#dftblbdy");
 
 	$(document).on("submit", "#addforeman", addForeman);
-
+	$(document).on("click", "button.f_delete", deleteForeman);
+	$(document).on("click", "button.f_deactivate", deactivateForeman);
+	$(document).on("click", "button.f_activate", activateForeman);
 	
 	getForemen();
+
+	function resetList(){
+		activeForemenList.empty();
+  	unactiveForemenList.empty();
+  	getForemen();
+	}
 
 	function getForemen(){
 		$.get("/api/foremen", function(data){
@@ -25,38 +32,62 @@ $(document).ready(function() {
 					unactiveForemenRows.push(createDeactiveForemanRow(data[i]));
 				}
 			}
-			// renderForemenList(foremenRows);
-			// nameInput.val('');
 		});
 	}
 
 	function createActiveForemanRow(aforemanData){
 		var newTr = $('<tr>');
 		newTr.append("<td data-name='" + aforemanData.name + "'>" + aforemanData.name + "</td>");
-		newTr.append("<td><button data-id='"+aforemanData.id+"' class='btn btn-primary'>Deactivate</button></td>");
-		newTr.append("<td><button data-id='"+aforemanData.id+"' class='btn btn-danger'>Delete</button></td>");
+		newTr.append("<td><button data-id='"+aforemanData.id+"' class='f_deactivate btn btn-primary'>Deactivate</button></td>");
+		newTr.append("<td><button data-id='"+aforemanData.id+"' class='f_delete btn btn-danger'>Delete</button></td>");
 		newTr.append("</tr>");
 		activeForemenList.append(newTr);
-	};
+	}
+	
 	function createDeactiveForemanRow(dforemanData){
 		var newTr = $('<tr>');
 		newTr.append("<td data-name='" + dforemanData.name + "'>" + dforemanData.name + "</td>");
-		newTr.append("<td><button data-id='"+dforemanData.id+"' class='btn btn-primary'>Activate</button></td>");
-		newTr.append("<td><button data-id='"+dforemanData.id+"' class='btn btn-danger'>Delete</button></td>");
+		newTr.append("<td><button data-id='"+dforemanData.id+"' class='f_activate btn btn-primary'>Activate</button></td>");
+		newTr.append("<td><button data-id='"+dforemanData.id+"' class='f_delete btn btn-danger'>Delete</button></td>");
 		newTr.append("</tr>");
 		unactiveForemenList.append(newTr);
-	};
+	}
 
 	function addForeman(event) {
-	    event.preventDefault();
-	    activeForemenList.empty();
-	    unactiveForemenList.empty();
-	    var foreman = {
-	      name: nameInput.val().trim(),
-	    };
-	    $.post("/api/foremen",foreman, getForemen);
-	    nameInput.val("");
+    event.preventDefault(); 
+    var foreman = {
+      name: nameInput.val().trim(),
+    };
+    $.post("/api/foremen",foreman,resetList);
+    nameInput.val("");
   }
-});
 
+	function deleteForeman(event){
+		event.stopPropagation();
+    var id = $(this).data("id");
+    $.ajax({
+      method: "DELETE",
+      url: "/api/foremen/" + id
+    }).done(resetList);
+	}
+
+	function deactivateForeman (event){
+		event.stopPropagation();
+		var id = $(this).data("id");
+    $.ajax({
+      method: "PUT",
+      url: "/api/foremen/deactivate/" + id
+    }).done(resetList);
+	}
+
+	function activateForeman (event){
+		event.stopPropagation();
+		var id = $(this).data("id");
+    $.ajax({
+      method: "PUT",
+      url: "/api/foremen/activate/" + id
+    }).done(resetList);
+	}
+
+});
 

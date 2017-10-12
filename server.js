@@ -18,10 +18,10 @@ require("./routes/reports-api-routes.js")(app);
 require("./routes/jobs-api-routes.js")(app);
 require("./routes/foremen-api-routes.js")(app);
 
-db.sequelize.sync().then(function() {
+db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
 });
 
-// .sync({ force: true }) - find out meaning?
+// .sync({ force: true }) - deletes db & tables on load
