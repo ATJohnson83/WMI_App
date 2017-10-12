@@ -5,6 +5,7 @@ $(document).ready(function() {
 	var activeForemenList = $("#aftblbdy");
 	var unactiveForemenList = $("#uftblbdy");
 
+	$(document).on("submit", "#addforeman", addForeman);
 
 	
 	getForemen();
@@ -45,6 +46,17 @@ $(document).ready(function() {
 		newTr.append("</tr>");
 		unactiveForemenList.append(newTr);
 	};
+
+	function addForeman(event) {
+	    event.preventDefault();
+	    activeForemenList.empty();
+	    unactiveForemenList.empty();
+	    var foreman = {
+	      name: nameInput.val().trim(),
+	    };
+	    $.post("/api/foremen",foreman, getForemen);
+	    nameInput.val("");
+  }
 });
 
 

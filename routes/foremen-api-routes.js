@@ -8,4 +8,13 @@ module.exports = function(app) {
     });
   });
 
+	app.post("/api/foremen", function(req, res) {
+    db.Foremen.create({
+      name: req.body.name,
+      active: true
+    }).then(function(dbForemen) {  
+      res.json(dbForemen);
+    });
+  });
+
 };
