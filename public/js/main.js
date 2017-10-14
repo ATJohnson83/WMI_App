@@ -15,22 +15,24 @@ $(document).ready(function() {
   };
 
   function userMenu(userName){ 
-      $("#name-input").append('<option>'+userName+'</option>');
-  };
+    $("#name-input").append('<option>'+userName+'</option>');
+    };
 
 	loginBtn.click(function(event) {
-    alert('login btn working')
+    // alert('login btn working');
     event.preventDefault();
     var userData = {
-      name: userName,
-      password: userPassword
+      name: $("#name-input").val().trim(),
+      password: $("#password-input").val().trim()
     };
+    console.log("user: " + userData.name);
+    console.log("user pass: "+userData.password);
     if (!userData.name || !userData.password) {
       return;
     }
     loginUser(userData.name, userData.password);
-    userName.val("");
-    userPassword.val("");
+    // userName.val("");
+    // userPassword.val("");
   });
 
   function loginUser(name, password) {
@@ -39,6 +41,7 @@ $(document).ready(function() {
       	name: name,
       	password: password
     	}).then(function(data) {
+        console.log('Data from server: ' +data);
       	window.location.replace(data);
     	}).catch(function(err) {
       	console.log(err);
