@@ -6,7 +6,11 @@ $(document).ready(function() {
 	$('#getreport').click(function(){
 		clearView();
 		getReports();
+	});
 
+	$('#getallreports').click(function(){
+		clearView();
+		getAllReports();
 	});
 
 	$('#startDate').datepicker({
@@ -38,8 +42,8 @@ $(document).ready(function() {
 	};
 
 	function getAllReports(){
-		alert("get all fnc called");
-		$.get("/api/reports", function(data){
+		$.get("/api/allreports", function(data){
+			console.log("all reports data: " + data);
 	    for (var i = 0; i < data.length; i++) {
 	    	createReportRow(data[i]);
 	    }

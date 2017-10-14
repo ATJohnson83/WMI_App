@@ -18,8 +18,9 @@ module.exports = function(app) {
 	});
 
 
-	app.get("/api/reports", function(req, res) {
+	app.get("/api/allreports", function(req, res) {
     db.Reports.findAll({}).then(function(dbReports) {
+    	console.log(dbReports);
       res.json(dbReports);
     });
   });
