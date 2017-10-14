@@ -3,51 +3,52 @@ var db = require("../models");
 module.exports = function(app) {
 
 	app.get("/api/foremen", function(req, res) {
-    db.Foremen.findAll({}).then(function(dbForemen) {
-      res.json(dbForemen);
+    db.User.findAll({}).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
 
 	app.post("/api/foremen", function(req, res) {
-    db.Foremen.create({
+    db.User.create({
       name: req.body.name,
+      password: req.body.password,
       active: true
-    }).then(function(dbForemen) {  
-      res.json(dbForemen);
+    }).then(function(dbUser) {  
+      res.json(dbUser);
     });
   });
 
   app.delete("/api/foremen/:id", function(req, res) {
-    db.Foremen.destroy({
+    db.User.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function(dbForemen) {
-      res.json(dbForemen);
+    }).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
 
   app.put("/api/foremen/deactivate/:id", function(req, res) {
-    db.Foremen.update({
+    db.User.update({
       active: false
     }, {
       where: {
         id: req.params.id
       }
-    }).then(function(dbForemen) {
-      res.json(dbForemen);
+    }).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
 
   app.put("/api/foremen/activate/:id", function(req, res) {
-    db.Foremen.update({
+    db.User.update({
       active: true
     }, {
       where: {
         id: req.params.id
       }
-    }).then(function(dbForemen) {
-      res.json(dbForemen);
+    }).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
 

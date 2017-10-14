@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Reports = sequelize.define("Reports", {
     job: DataTypes.STRING,
-    date: DataTypes.DATE,
+    date: DataTypes.DATEONLY,
     foreman: DataTypes.STRING,
     brick: DataTypes.INTEGER,
     cmu: DataTypes.INTEGER,

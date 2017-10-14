@@ -11,6 +11,9 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </head>
 <body>
@@ -29,12 +32,7 @@
 
 								<label>Job Name</label>
 					    	<select class="chosen-select" id="jname">
-						      <option value=""></option>
-						      <option value="1">Triangle Springs</option>
-						      <option value="2">Union Station</option>
-						      <option value="3">NCSU-CUP</option>
-						      <option value="4">RTI</option>
-						      <option value="5">Duke Engergy - Goldsboro</option>
+						      <option></option>
 					    	</select>
 					    	
 					    	<label>Start Date</label>
@@ -42,7 +40,7 @@
 								<label>End Date</label>
 								<input placeholder="End Date" id="endDate" type="text"/>
 
-								<button type="submit" class="btn btn-success">Get Report</button>
+								<button id="getreport" type="submit" class="btn btn-success">Get Report</button>
 								
 								<table class="table table-striped">
 								<thead>
@@ -59,31 +57,7 @@
 										<th>Additional</th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr>
-										<td>9/10/2017</td>
-										<td>Connie Whitman</td>
-										<td>1500</td>
-										<td>450</td>
-										<td>8</td>
-										<td>5</td>
-										<td>1</td>
-										<td>1</td>
-										<td>9.5</td>
-										<td>Craig caught a trash bin on fire. Blake didnt come to work until noon.  Scaffold motor broken.  Need to set up frame scaffold on east wall, will pour concrete wednesday.</td>
-									</tr>
-									<tr>
-										<td>9/9/2017</td>
-										<td>Connie Whitman</td>
-										<td>1300</td>
-										<td>350</td>
-										<td>8</td>
-										<td>5</td>
-										<td>1</td>
-										<td>1</td>
-										<td>9.5</td>
-										<td>Set up scaffold in the afternoon.</td>
-									</tr>
+								<tbody id='rtblbdy'>
 								</tbody>
 							</table>
 						</div>

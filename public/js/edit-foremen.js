@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	
 	var nameInput = $("#foreman-name");
+	var passwordInput = $("#foreman-password");
 	var activeForemenList = $("#aftblbdy");
 	var unactiveForemenList = $("#dftblbdy");
 
@@ -38,6 +39,7 @@ $(document).ready(function() {
 	function createActiveForemanRow(aforemanData){
 		var newTr = $('<tr>');
 		newTr.append("<td data-name='" + aforemanData.name + "'>" + aforemanData.name + "</td>");
+		newTr.append("<td data-name='" + aforemanData.password + "'>" + aforemanData.password + "</td>");
 		newTr.append("<td><button data-id='"+aforemanData.id+"' class='f_deactivate btn btn-primary'>Deactivate</button></td>");
 		newTr.append("<td><button data-id='"+aforemanData.id+"' class='f_delete btn btn-danger'>Delete</button></td>");
 		newTr.append("</tr>");
@@ -57,9 +59,11 @@ $(document).ready(function() {
     event.preventDefault(); 
     var foreman = {
       name: nameInput.val().trim(),
+      password: passwordInput.val().trim()
     };
     $.post("/api/foremen",foreman,resetList);
     nameInput.val("");
+    passwordInput.val("");
   }
 
 	function deleteForeman(event){
