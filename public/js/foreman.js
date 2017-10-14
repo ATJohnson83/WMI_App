@@ -4,8 +4,9 @@ $(document).ready(function() {
 
   loggedInForeman();
 	personelMenu();
-  getForemen();
   getJobs();
+  var aforeman;
+  console.log(aforeman);
 
 	$('#date').datepicker({
       changeMonth: true,
@@ -15,21 +16,11 @@ $(document).ready(function() {
 
   function loggedInForeman(){
     $.get("/api/user_data").then(function(data) {
-      $(".member-name").text(data.name);
+      aforeman = data.name;
+      $(".member-name").text(aforeman);
     });
   };
 
-  function getForemen(){
-    $.get("/api/foremen", function(data){
-      for (var i = 0; i < data.length; i++) {
-        foremenMenu(data[i].name);
-      }
-    });
-  };
-
-  function foremenMenu(fName){ 
-      $("#fname").append('<option>'+fName+'</option>');
-  };
 
   function getJobs(){
     $.get("/api/jobs", function(data){
@@ -61,7 +52,7 @@ $(document).ready(function() {
     var report= {
       job: $('#jname').val().trim(),
       date: $('#date').val(),
-      foreman: $('#fname').val().trim(),
+      foreman: aforeman,
       brick: $('#brick').val().trim(),
       cmu: $('#cmu').val().trim(),
       masons: $('#masons').val().trim(),
@@ -71,9 +62,19 @@ $(document).ready(function() {
       hours: $('#hours').val().trim(),
       additional: $('#additional').val().trim()
     };
-    $.post("/api/reports",report,);
+    $.post("/api/reports",report,).then(function(){
+      $('#date').val("");
+      $('.member-name').val("");
+      $('#brick').val("");
+      $('#cmu').val("");
+      $('#masons').val("");
+      $('#labor').val("");
+      $('#foremen').val("");
+      $('#operators').val("");
+      $('#hours').val("");
+      $('#additional').val("");
+    });
   }
-
 
 });
 
