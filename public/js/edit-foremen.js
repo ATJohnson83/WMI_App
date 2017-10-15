@@ -40,8 +40,8 @@ $(document).ready(function() {
 		var newTr = $('<tr>');
 		newTr.append("<td data-name='" + aforemanData.name + "'>" + aforemanData.name + "</td>");
 		newTr.append("<td data-name='" + aforemanData.password + "'>" + aforemanData.password + "</td>");
-		newTr.append("<td><button data-id='"+aforemanData.id+"' class='f_deactivate btn btn-primary'>Deactivate</button></td>");
-		newTr.append("<td><button data-id='"+aforemanData.id+"' class='f_delete btn btn-danger'>Delete</button></td>");
+		newTr.append("<td><button data-id='"+aforemanData.id+"' class='f_deactivate btn btn-primary glyphicon glyphicon-hand-down'></button></td>");
+		newTr.append("<td><button data-id='"+aforemanData.id+"' class='f_delete btn btn-danger glyphicon glyphicon-remove'></button></td>");
 		newTr.append("</tr>");
 		activeForemenList.append(newTr);
 	}
@@ -49,8 +49,8 @@ $(document).ready(function() {
 	function createDeactiveForemanRow(dforemanData){
 		var newTr = $('<tr>');
 		newTr.append("<td data-name='" + dforemanData.name + "'>" + dforemanData.name + "</td>");
-		newTr.append("<td><button data-id='"+dforemanData.id+"' class='f_activate btn btn-primary'>Activate</button></td>");
-		newTr.append("<td><button data-id='"+dforemanData.id+"' class='f_delete btn btn-danger'>Delete</button></td>");
+		newTr.append("<td><button data-id='"+dforemanData.id+"' class='f_activate btn btn-primary glyphicon glyphicon-hand-up'></button></td>");
+		newTr.append("<td><button data-id='"+dforemanData.id+"' class='f_delete btn btn-danger glyphicon glyphicon-remove'></button></td>");
 		newTr.append("</tr>");
 		unactiveForemenList.append(newTr);
 	}

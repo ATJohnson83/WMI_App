@@ -38,8 +38,8 @@ $(document).ready(function() {
 	function createActiveJobRow(ajobData){
 		var newTr = $('<tr>');
 		newTr.append("<td data-name='" + ajobData.name + "'>" + ajobData.name + "</td>");
-		newTr.append("<td><button data-id='"+ajobData.id+"' class='j_deactivate btn btn-primary'>Deactivate</button></td>");
-		newTr.append("<td><button data-id='"+ajobData.id+"' class='j_delete btn btn-danger'>Delete</button></td>");
+		newTr.append("<td><button data-id='"+ajobData.id+"' class='j_deactivate btn btn-primary glyphicon glyphicon-hand-down'></button></td>");
+		newTr.append("<td><button data-id='"+ajobData.id+"' class='j_delete btn btn-danger glyphicon glyphicon-remove'></button></td>");
 		newTr.append("</tr>");
 		activeJobsList.append(newTr);
 	}
@@ -47,8 +47,8 @@ $(document).ready(function() {
 	function createDeactiveJobRow(djobData){
 		var newTr = $('<tr>');
 		newTr.append("<td data-name='" + djobData.name + "'>" + djobData.name + "</td>");
-		newTr.append("<td><button data-id='"+djobData.id+"' class='j_activate btn btn-primary'>Activate</button></td>");
-		newTr.append("<td><button data-id='"+djobData.id+"' class='j_delete btn btn-danger'>Delete</button></td>");
+		newTr.append("<td><button data-id='"+djobData.id+"' class='j_activate btn btn-primary glyphicon glyphicon-hand-up'></button></td>");
+		newTr.append("<td><button data-id='"+djobData.id+"' class='j_delete btn btn-danger glyphicon glyphicon-remove'></button></td>");
 		newTr.append("</tr>");
 		unactiveJobsList.append(newTr);
 	}
