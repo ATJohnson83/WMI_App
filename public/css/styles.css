@@ -156,7 +156,31 @@ hr{
 	background: linear-gradient(rgba(200,200,200,1),rgba(248,248,248,.8));
 }
 
+@media only screen and (max-width: 375px) {
+	/*.mainbody {
+    background: url(../images/bricks-1.jpeg) no-repeat center fixed;
+    background-size: cover;
+	}*/
+	
+	.header{
+	padding-top: 20px;
+	padding-bottom: 10px;
+	}
 
+	.block {
+		width: 15px;
+		height: 30px;
+		display: inline-block;
+		margin-left: 5px;
+		transform: rotate(-45deg);
+	}
+
+	.wm-title{
+		font-size: 20px;
+		letter-spacing: 6px;
+	}
+
+}
 
 
 

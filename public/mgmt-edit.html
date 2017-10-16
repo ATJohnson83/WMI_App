@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WMI-Mgmt-Edit</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+</head>
+<body class="mgmteditbody">
+
+
+	<div class='brckheader text-center'>
+		<div class="row row-1a">
+			<div class='block'></div>
+		 	<div class='block'></div>
+		 	<div class='block'></div>
+		</div>
+		<h1 class='wm-title'>WHITMAN MASONRY</h1>
+	</div>
+
+	<div class='container'>
+		<div class='mgmteditpanel panel panel-default'>
+			<div class="panel-heading text-center">
+				<h2>JOBS</h2>
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+									
+								<form id='addjob'>
+									<label>Add a Job</label>
+								<input placeholder="Enter a Job" id="job-name" type="text" />
+								<button type="submit" class="btn btn-primary glyphicon glyphicon-plus"></button>
+								</form>
+								
+								<h3>ACTIVE JOBS</h3>
+								<table class="table table-striped">
+									<thead>
+										<th>Name</th>
+										<th>Deactivate</th>
+										<th>Delete</th>
+									</thead>
+									<tbody id="ajtblbdy"></tbody>
+								</table>
+
+								<h3>DEACTIVE JOBS</h3>
+								<table class="table table-striped">
+									<thead>
+										<th>Name</th>
+										<th>Activate</th>
+										<th>Delete</th>
+									</thead>
+									<tbody id="djtblbdy"> </tbody>
+								</table>
+									
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='mgmteditpanel panel panel-default'>
+			<div class="panel-heading text-center">
+				<h2>USERS</h2>
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<div class="user-container">
+								
+								
+								<form id='addforeman'>
+									<label>Name</label>
+									<input placeholder="Enter a Foreman" id="foreman-name" type="text" />
+									<label>Password</label>
+									<input placeholder="MMYYYY of Birthdate" id="foreman-password"/>
+									<button type="submit" class="btn btn-primary glyphicon glyphicon-plus"></button>
+								</form>
+								
+
+								<h3>ACTIVE USERS</h3>
+								<table class="table table-striped">
+									<thead>
+										<th>Name</th>
+										<th>Password</th>
+										<th>Deactivate</th>
+										<th>Delete</th>
+									</thead>
+									<tbody id="aftblbdy"></tbody>
+								</table>
+
+								<h3>DEACTIVE USERS</h3>
+								<table class="table table-striped">
+									<thead>
+										<th>Name</th>
+										<th>Password</th>
+										<th>Activate</th>
+										<th>Delete</th>
+									</thead>
+									<tbody id="dftblbdy"> </tbody>
+								</table>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="./js/edit-foremen.js"></script>
+<script type="text/javascript" src="./js/edit-jobs.js"></script>
+</body>
+</html>

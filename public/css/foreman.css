@@ -41,6 +41,10 @@ hr{
 	padding: 30px
 }
 
+.dropdown-toggle {
+	float: right;
+}
+
 .block {
 	background: rgb(200,0,0);
 	width: 30px;
@@ -61,7 +65,6 @@ hr{
 .vmgmteditpanel{
 	background: rgba(248,248,248,.9);
 	margin-top: 100px;
-	/*padding : 0px 20px 30px;*/
 }
 
 .panel-heading {
@@ -71,22 +74,39 @@ hr{
 @media only screen and (max-width: 375px) {
 	
 	.brckheader{
-	padding: 0px
-	background-color: white;
+		padding: 15px
+	}
+
+	.dropdown-menu-right{
+		position:absolute;
+		top:35px;
+		background: linear-gradient(rgb(200,200,200),rgb(248,248,248));
+	}
+
+	.brckheader{
+		height: 70px;
+	}
+
+	.logodiv {
+		position: absolute;
+		left: 150px;
 	}
 
 	.block {
-		width: 10px;
-		height: 20px;
+		width: 15px;
+		height: 30px;
 		display: inline-block;
-		margin-left: 3px;
+		margin-left: 5px;
 		transform: rotate(-45deg);
 	}
 
 	.wm-title {
-		font-size: 10px;
-		letter-spacing: 5px;
-		
+		display: none;
+	}
+
+	.vmgmteditpanel{
+		background: rgba(248,248,248,.9);
+		margin-top: 20px;
 	}
 }
 
