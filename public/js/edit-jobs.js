@@ -50,7 +50,7 @@ $(document).ready(function() {
 		var newTr = $('<tr>');
 		newTr.append("<td data-name='" + ajobData.name + "'>" + ajobData.name + "</td>");
 		newTr.append("<td><button data-id='"+ajobData.id+"' class='j_deactivate btn btn-primary glyphicon glyphicon-hand-down'></button></td>");
-		newTr.append("<td><button data-id='"+ajobData.id+"' class='j_delete btn btn-danger glyphicon glyphicon-remove'></button></td>");
+		// newTr.append("<td><button data-id='"+ajobData.id+"' class='j_delete btn btn-danger glyphicon glyphicon-remove'></button></td>");
 		newTr.append("</tr>");
 		activeJobsList.append(newTr);
 	}

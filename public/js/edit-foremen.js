@@ -9,10 +9,11 @@ $(document).ready(function() {
 	$(document).on("click", "button.f_delete", deleteForeman);
 	$(document).on("click", "button.f_deactivate", deactivateForeman);
 	$(document).on("click", "button.f_activate", activateForeman);
+	$(document).on("click", "button.f_password", showPassword);
 	$('#dusershow').click(showDeactive);
 	$('#duserhide').click(hideDeactive);
 
-
+	
 	hideDeactive();
 	getForemen();
 
@@ -23,6 +24,7 @@ $(document).ready(function() {
 	function showDeactive(){
 		unactiveForemenList.show()
 	}
+
 
 	function resetList(){
 		activeForemenList.empty();
@@ -51,16 +53,17 @@ $(document).ready(function() {
 	function createActiveForemanRow(aforemanData){
 		var newTr = $('<tr>');
 		newTr.append("<td data-name='" + aforemanData.name + "'>" + aforemanData.name + "</td>");
-		newTr.append("<td data-name='" + aforemanData.password + "'>" + aforemanData.password + "</td>");
+		newTr.append("<td><button data-password='"+aforemanData.password+"' type='button' class='f_password btn btn-primary glyphicon glyphicon-modal-window' data-toggle='modal' data-target='.bs-example-modal-sm'></button></td>");
 		newTr.append("<td><button data-id='"+aforemanData.id+"' class='f_deactivate btn btn-primary glyphicon glyphicon-hand-down'></button></td>");
-		newTr.append("<td><button data-id='"+aforemanData.id+"' class='f_delete btn btn-danger glyphicon glyphicon-remove'></button></td>");
 		newTr.append("</tr>");
 		activeForemenList.append(newTr);
 	}
+
 	
 	function createDeactiveForemanRow(dforemanData){
 		var newTr = $('<tr>');
 		newTr.append("<td data-name='" + dforemanData.name + "'>" + dforemanData.name + "</td>");
+		newTr.append("<td><button data-password='"+dforemanData.password+"' type='button' class='f_password btn btn-primary glyphicon glyphicon-modal-window' data-toggle='modal' data-target='.bs-example-modal-sm'></button></td>");
 		newTr.append("<td><button data-id='"+dforemanData.id+"' class='f_activate btn btn-primary glyphicon glyphicon-hand-up'></button></td>");
 		newTr.append("<td><button data-id='"+dforemanData.id+"' class='f_delete btn btn-danger glyphicon glyphicon-remove'></button></td>");
 		newTr.append("</tr>");
@@ -103,6 +106,12 @@ $(document).ready(function() {
       method: "PUT",
       url: "/api/foremen/activate/" + id
     }).done(resetList);
+	}
+
+	function showPassword (event){
+		event.stopPropagation();
+		var password = $(this).data("password");
+		$('.modal-password').text(password);
 	}
 
 });
