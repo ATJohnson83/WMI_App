@@ -8,8 +8,19 @@ $(document).ready(function() {
 	$(document).on("click", "button.j_delete", deleteJob);
 	$(document).on("click", "button.j_deactivate", deactivateJob);
 	$(document).on("click", "button.j_activate", activateJob);
-	
+	$('#djobshow').click(showDeactive);
+	$('#djobhide').click(hideDeactive);
+
 	getJobs();
+	hideDeactive();
+
+	function hideDeactive(){
+		unactiveJobsList.hide()
+	}
+
+	function showDeactive(){
+		unactiveJobsList.show()
+	}
 	
 	function resetList(){
 		activeJobsList.empty();

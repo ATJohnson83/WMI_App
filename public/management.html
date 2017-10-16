@@ -5,7 +5,7 @@
  	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>WMI-Management</title>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" type="text/css" href="./css/reset.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="./css/styles.css">
 	<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -27,25 +27,27 @@
 		<h1 class='wm-title'>WHITMAN MASONRY</h1>
 	</div>
 	
-	<div class='container text-center'>
+	<div class='container'>
 		<div class="row">
-			<div class="mgmtmenu panel col-md-4 col-md-offset-4"> 
-				<a href="/mgmt-view">
-					<div id="mgmt-view" class="logomenu">
-					<h2 class="mgtlinks">View Reports ></h2></div>
-				</a> 
-				<a href="/mgmt-edit-jobs">
-					<div id="mgmt-editJ" class="logomenu">
-					<h2 class="mgtlinks">Edit Jobs ></h2></div>
-				</a>
-				<a href="/mgmt-edit-users">
-					<div id="mgmt-editU" class="logomenu">
-					<h2 class="mgtlinks">Edit Users ></h2></div>
-				</a>
-				<a href="/logout">
-					<div id="mgmt-logout" class="logomenu">
-					<h2 class="mgtlinks">Log Out ></h2></div>
-				</a>  
+			<div class="mgmtmenu panel"> 
+				<div class="mgmt-report-image col-lg-4">	
+					<a href="/mgmt-view">
+						<div id="mgmt-view" class="logomenu">
+						<h2 class="mgtlinks">View Reports ></h2></div>
+					</a> 
+				</div>
+				<div class="mgmt-job-image col-lg-4">
+					<a href="/mgmt-edit-jobs">
+						<div id="mgmt-editJ" class="logomenu">
+						<h2 class="mgtlinks">Edit Jobs ></h2></div>
+					</a>
+				</div>
+				<div class="mgmt-user-image col-lg-4">
+					<a href="/mgmt-edit-users">
+						<div id="mgmt-editU" class="logomenu">
+						<h2 class="mgtlinks">Edit Users ></h2></div>
+					</a>
+				</div>
       </div>
 		</div>
 	</div>

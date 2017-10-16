@@ -9,10 +9,20 @@ $(document).ready(function() {
 	$(document).on("click", "button.f_delete", deleteForeman);
 	$(document).on("click", "button.f_deactivate", deactivateForeman);
 	$(document).on("click", "button.f_activate", activateForeman);
+	$('#dusershow').click(showDeactive);
+	$('#duserhide').click(hideDeactive);
 
-	
+
+	hideDeactive();
 	getForemen();
 
+	function hideDeactive(){
+		unactiveForemenList.hide()
+	}
+
+	function showDeactive(){
+		unactiveForemenList.show()
+	}
 
 	function resetList(){
 		activeForemenList.empty();
