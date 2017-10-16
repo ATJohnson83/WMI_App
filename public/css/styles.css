@@ -1,3 +1,39 @@
+html{
+	height: 100%;
+}
+
+nav a {
+  display: inline-block;
+  padding-left: 15px;
+  margin-left: 15px;
+  line-height: 18px;
+  letter-spacing: 5px;
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	color: rgb(120,120,120);
+  text-decoration: none;
+  border-left: 2px solid #efefef;
+}
+
+nav a:hover{
+	text-decoration: none;
+	font-size: 115%;
+}
+
+nav a:first-child {
+  border-left: 0 none;
+}
+
+hr{
+	background-color:#000000;
+	border-width:0;
+	color:#000000;
+	height:2px;
+	line-height:0;
+	text-align:left;
+	width:100%;
+	}
+
 .mainbody {
     background: url(../images/doug1.jpeg) no-repeat center fixed;
     background-size: cover;
@@ -8,16 +44,14 @@
     background-size: cover;
 }
 
-.mgmteditbody {
-    /*background: linear-gradient(rgba(200,200,200,1),rgba(248,248,248,.5));*/
+.brickbody {
     background: url(../images/bricks-1.jpeg) no-repeat center;
-    background-size: cover;
 		margin: 0;
 		padding: 0;
 }
 
 .pagecover {
-	background-color: rgba(248,248,248,0.2);
+	background-color: rgba(248,248,248,0.25);
   position:fixed;
   width:100%;
   height:100%;
@@ -25,8 +59,14 @@
   left:0px;
 }
 
+
+.container {
+	height: 100%;
+	overflow: scroll;
+}
+
 .header{
-	background: linear-gradient(rgba(200,200,200,1),rgba(248,248,248,.5));
+	background: linear-gradient(rgba(200,200,200,1),rgba(248,248,248,.6));
 	padding: 30px;
 }
 
@@ -50,7 +90,7 @@
 	letter-spacing: 30px;
 	font-family: 'Times New Roman';
 	font-weight: bold;
-	color: rgb(100,100,100);
+	color: rgb(120,120,120);
 }
 
 .login {
@@ -65,16 +105,9 @@
 	/*padding : 0px 20px 30px;*/
 }
 
-.mgmteditpanel{
-	background: rgba(248,248,248,.95);
-	margin-top: 100px;
-	/*padding : 0px 20px 30px;*/
+.mgmtmenu a {
+	text-decoration: none;
 }
-
-.panel-heading {
-	background: linear-gradient(rgba(200,200,200,1),rgba(248,248,248,.8));
-}
-
 
 .mgtlinks{
 	color: rgb(50,50,50);
@@ -82,6 +115,48 @@
 	font-style: italic;
 }
 
-.nameph {
-	color: rgba(200,200,200,1);
+.mgtlinks:hover {
+	font-size: 35px;
 }
+
+.jmgmteditpanel{
+	background: rgba(248,248,248,.9);
+	margin-top: 100px;
+	/*padding : 0px 20px 30px;*/
+}
+
+.umgmteditpanel{
+	background: rgba(248,248,248,.9);
+	margin-top: 100px;
+	/*padding : 0px 20px 30px;*/
+}
+
+.vmgmteditpanel{
+	background: rgba(248,248,248,.9);
+	margin-top: 100px;
+	/*padding : 0px 20px 30px;*/
+}
+
+
+.curview{
+	display: inline-block;
+}
+
+#showusers, #showjobs{
+	float: right;
+	display: inline-block;
+	background: linear-gradient(rgba(150,150,150,1),rgba(220,220,220,.5));
+	padding: 5px;
+	border-radius: 10%;
+}
+
+
+
+.panel-heading {
+	background: linear-gradient(rgba(200,200,200,1),rgba(248,248,248,.8));
+}
+
+
+
+
+

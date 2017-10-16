@@ -10,7 +10,7 @@ $(document).ready(function() {
 	$(document).on("click", "button.j_activate", activateJob);
 	
 	getJobs();
-
+	
 	function resetList(){
 		activeJobsList.empty();
   	unactiveJobsList.empty();

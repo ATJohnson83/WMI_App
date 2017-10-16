@@ -9,8 +9,10 @@ $(document).ready(function() {
 	$(document).on("click", "button.f_delete", deleteForeman);
 	$(document).on("click", "button.f_deactivate", deactivateForeman);
 	$(document).on("click", "button.f_activate", activateForeman);
+
 	
 	getForemen();
+
 
 	function resetList(){
 		activeForemenList.empty();
