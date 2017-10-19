@@ -2,6 +2,10 @@ html{
 	height: 100%;
 }
 
+@-ms-viewport{
+    width: device-width, initial-scale=1, maximum-scale=1;
+}
+
 nav a {
   display: inline-block;
   padding-left: 15px;
@@ -233,6 +237,10 @@ hr{
     background-size: cover;
 	}*/
 	
+	@-ms-viewport{
+    width: device-width, initial-scale=1, maximum-scale=1;
+	}
+
 	.header{
 	padding-top: 20px;
 	padding-bottom: 10px;
