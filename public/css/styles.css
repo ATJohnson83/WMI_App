@@ -42,7 +42,7 @@ hr{
 }
 
 .mgmtbody {
-    background: url(../images/doug3.jpeg) no-repeat center fixed;
+    background: url(../images/doug2.jpeg) no-repeat center fixed;
     background-size: cover;
 }
 
@@ -54,7 +54,7 @@ hr{
 
 .mgmtmenu {
   background: linear-gradient(rgba(200,200,200,1),rgba(248,248,248,.6));
-	height: 300px;
+	/*height: 300px;*/
 	width: 100%;
 	margin-top: 100px;
 	padding: 50px;
@@ -63,10 +63,10 @@ hr{
 .mgmt-report-image{
 		background: url(../images/reports1.jpg) no-repeat center;
 		background-size: cover;
-		margin: 0;
-		padding: 0;
+		margin: 5px;
+		padding:0;
 /*		margin-top: 100px;*/
-		height: 200px;
+		height: 150px;
 		width: 30%;
 		margin-right: 30px;
 		border-radius: 5%;
@@ -78,10 +78,10 @@ hr{
 .mgmt-job-image{
 		background: url(../images/doug3.jpeg) no-repeat center;
 		background-size: cover;
-		margin: 0;
+		margin: 5px;
 		padding: 0;
 /*		margin-top: 100px;*/
-		height: 200px;
+		height: 150px;
 		width: 30%;
 		margin-right: 30px;
 		border-radius: 5%;
@@ -93,15 +93,105 @@ hr{
 .mgmt-user-image{
 		background: url(../images/billy.jpeg) no-repeat center;
 		background-size: cover;
-		margin: 0;
+		margin: 5px;
 		padding: 0;
 /*		margin-top: 100px;*/
-		height: 200px;
+		height: 150px;
 		width: 30%;
 		margin-right: 30px;
 		border-radius: 5%;
 }
 .mgmt-user-image a{
+	text-decoration: none;
+}
+
+.mgmt-safety-image{
+		background: url(../images/safety.jpg) no-repeat center;
+		background-size: cover;
+		margin: 5px;
+		padding: 0;
+/*		margin-top: 100px;*/
+		height: 150px;
+		width: 30%;
+		margin-right: 30px;
+		border-radius: 5%;
+}
+.mgmt-safety-image a{
+	text-decoration: none;
+}
+
+.mgmt-task-image{
+		background: url(../images/todo-list.jpeg) no-repeat center;
+		background-size: cover;
+		margin: 5px;
+		padding: 0;
+/*		margin-top: 100px;*/
+		height: 150px;
+		width: 30%;
+		margin-right: 30px;
+		border-radius: 5%;
+}
+.mgmt-task-image a{
+	text-decoration: none;
+}
+
+.mgmt-est-image{
+		background: url(../images/ruler_blueprints.jpg) no-repeat center;
+		background-size: cover;
+		margin: 5px;
+		padding: 0;
+/*		margin-top: 100px;*/
+		height: 150px;
+		width: 30%;
+		margin-right: 30px;
+		border-radius: 5%;
+}
+.mgmt-est-image a{
+	text-decoration: none;
+}
+
+.mgmt-equip-image{
+		background: url(../images/equipment.jpg) no-repeat center;
+		background-size: cover;
+		margin: 5px;
+		padding: 0;
+/*		margin-top: 100px;*/
+		height: 150px;
+		width: 30%;
+		margin-right: 30px;
+		border-radius: 5%;
+}
+.mgmt-equip-image a{
+	text-decoration: none;
+}
+
+.mgmt-employees-image{
+		background: url(../images/nacho.jpg) no-repeat center;
+		background-size: cover;
+		margin: 5px;
+		padding: 0;
+/*		margin-top: 100px;*/
+		height: 150px;
+		width: 30%;
+		margin-right: 30px;
+		border-radius: 5%;
+}
+.mgmt-employees-image a{
+	text-decoration: none;
+}
+
+.mgmt-links-image{
+		background: url(../images/mcaa.jpg) no-repeat center;
+		background-size: cover;
+		margin: 5px;
+		padding: 0;
+/*		margin-top: 100px;*/
+		height: 150px;
+		width: 30%;
+		margin-right: 30px;
+		border-radius: 5%;
+}
+.mgmt-links-image a{
 	text-decoration: none;
 }
 
@@ -180,7 +270,8 @@ hr{
 }
 
 .mgtlinks:hover {
-	font-size: 35px;
+	font-size: 33px;
+	color: #23527c;
 }
 
 .jmgmteditpanel{
