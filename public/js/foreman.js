@@ -74,6 +74,7 @@ $(document).ready(function() {
       $('#hours').val("");
       $('#additional').val("");
     });
+    alert("Thank You "+aforeman);
   }
 
 });
